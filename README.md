@@ -36,7 +36,7 @@ flowchart LR
   %% API routes
   APIGW -->|HTTP: /orders| OrderApp
   APIGW -->|HTTP: /customers| CustomerApp
-  APIGW -->|HTTP: /customers/{id}/orderhistory| HistoryApp
+  APIGW -->|HTTP: /customers/id/orderhistory| HistoryApp
 
   %% Transactional publish (write + events)
   OrderApp -->|JPA transaction: persist Order + insert event(s)| OrderDB
